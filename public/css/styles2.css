@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkatra&family=Artifika&family=Montserrat+Subrayada:wght@700&family=Nerko+One&family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
+:root {
+  --orange: #ff7800;
+  --black: #130f40;
+  --light-color: #666;
+  --box-shadow: 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+  --border: 0.2rem solid rgba(0, 0, 0, 0.1);
+  --outline: 0.1rem solid rgba(0, 0, 0, 0.1);
+  --outline-hover: 0.2rem solid var(--black);
+}
+* {
+  font-family: "Ubuntu";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+body {
+  background-color: #d2c69d;
+  top: 0;
+  left: 0;
+  background-image: url("../images/user.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  margin-top: 5%;
+}
+
+html {
+  min-width: 100.1%;
+  height: 100.1%;
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+.profile {
+  text-align: center;
+}
+
+.row {
+  margin: 0 auto;
+}
+.column {
+  margin: 20px;
+  width: 220px;
+  display: inline-block;
+  text-align: center;
+}
+.categories {
+  font-size: 2.3rem;
+  font-family: "Artifika";
+  margin-bottom: 2%;
+  text-align: center;
+  text-shadow: 2px 2px 4px #5d5d5b;
+}
+.btn {
+  font-size: 1.5rem;
+  margin-bottom: 3%;
+  width: auto;
+  padding: 1rem;
+  height: 50px;
+  border-radius: 10px;
+  border: #8c9489 solid 2px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  color: #0c0404;
+}
+.btn-success {
+  background: #91cb45;
+  background-image: -webkit-linear-gradient(top, #58781a, #6da81a);
+  background-image: -moz-linear-gradient(top, #a9be6a, #a3dd7d);
+  background-image: -ms-linear-gradient(top, #b0e489, #d6efd6);
+  background-image: -o-linear-gradient(top, #5a895a, #69c637);
+  background-image: linear-gradient(to bottom, #cbdca8, #70962e);
+}
+.btn-danger {
+  background: #cb4545;
+  background-image: -webkit-linear-gradient(top, #781a1a, #a81a1a);
+  background-image: -moz-linear-gradient(top, #b82e2e, #b22e2e);
+  background-image: -ms-linear-gradient(top, #7b2929, #a62d2d);
+  background-image: -o-linear-gradient(top, #cc2d2d, #c63737);
+  background-image: linear-gradient(to bottom, #ea7979, #9f2b2b);
+}
+
+#submit-btn {
+  margin-top: 15%;
+  background: #231202;
+  background-image: -webkit-linear-gradient(top, #423932, #3c2816);
+  background-image: -moz-linear-gradient(top, #3f3b38, #25160a);
+  background-image: -ms-linear-gradient(top, #362e27, #2f1e10);
+  background-image: -o-linear-gradient(top, #3b2e23, #3d2a19);
+  background-image: linear-gradient(to bottom, #0e0d0d, #432912);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: "Ubuntu";
+  color: #ffffff;
+  font-size: 18px;
+  padding: 7px 20px 7px 20px;
+  text-decoration: none;
+}
+#submit-btn:hover {
+  border: var(--border);
+  background: #292d2d;
+  background-image: -webkit-linear-gradient(top, #304d4f, #314048);
+  background-image: -moz-linear-gradient(top, #2d4e50, #414b51);
+  background-image: -ms-linear-gradient(top, #4c5454, #515557);
+  background-image: -o-linear-gradient(top, #445051, #384349);
+  background-image: linear-gradient(to bottom, #434f50, #304049);
+  text-decoration: none;
+}
+.dropdown-menu {
+  margin-top: 4%;
+  border-radius: 10px;
+}
+
+.dropdown-item {
+  text-align: left;
+  font-size: 1.5rem;
+  margin: 3% 2%;
+  width: auto;
+}
+.dropdown-item:hover {
+  background-color: #dfecca;
+}
+.d:hover {
+  background-color: #eedcdc;
+}
+
+#cover-spin {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 9999;
+  display: none;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#cover-spin::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 48%;
+  top: 40%;
+  width: 40px;
+  height: 40px;
+  border-style: solid;
+  border-color: var(--orange);
+  border-top-color: transparent;
+  border-width: 4px;
+  border-radius: 50%;
+  -webkit-animation: spin 0.8s linear infinite;
+  animation: spin 0.8s linear infinite;
+}

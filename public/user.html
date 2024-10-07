@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>healthilY_account</title>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- font awesome cdn link -->
+    <script src="https://kit.fontawesome.com/7fddfbd991.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/styles2.css">
+    
+</head>
+
+<body>
+    <section class="profile" id="profile">
+        <h1 class="categories">SELECT YOUR PREFERENCES</h1>
+        <form action="/submit" method="POST">
+        <div class="row">
+            <div class="column">
+                <div class="dropdown">
+                    <button class="btn btn-success dropdown-toggle" type="button" id="option1-dropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        DIETARY PREFERENCES
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="option1-dropdown">
+                        <a class="dropdown-item" href="#" data-value="Vegetarian">Vegetarian</a>
+                        <a class="dropdown-item" href="#" data-value="Vegan">Vegan</a>
+                        <a class="dropdown-item" href="#" data-value="Pescatarian">Pescatarian</a>
+                        <a class="dropdown-item" href="#" data-value="Omnivorous">Omnivorous</a>
+                        <a class="dropdown-item" href="#" data-value="Gluten-Free">Gluten-Free</a>
+                        <a class="dropdown-item" href="#" data-value="Dairy-Free">Dairy-Free</a>
+                        <a class="dropdown-item" href="#" data-value="Low-Carb">Low-Carb</a>
+                        <a class="dropdown-item" href="#" data-value="High-Protein">High-Protein</a>
+                        <a class="dropdown-item" href="#" data-value="Mediterranean">Mediterranean</a>
+                        <a class="dropdown-item" href="#" data-value="Paleo">Paleo</a>
+                        <a class="dropdown-item" href="#" data-value="Keto">Keto</a>
+                    </div>
+                </div>
+                <input type="hidden" id="option1-dropdown-hidden" name="option1" />
+            </div>
+            <div class="column">
+                <div class="dropdown">
+                    <button class="btn btn-danger dropdown-toggle" type="button" id="option2-dropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        CALORIC NEEDS
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="option2-dropdown">
+                        <a class="dropdown-item d" href="#" data-value="Maintenance Calories">Maintenance Calories</a>
+                        <a class="dropdown-item d" href="#" data-value="Caloric Deficit">Caloric Deficit</a>
+                        <a class="dropdown-item d" href="#" data-value="Caloric Surplus">Caloric Surplus</a>
+                    </div>
+                </div>
+                <input type="hidden" id="option2-dropdown-hidden" name="option2" />
+            </div>
+            <div class="column">
+                <div class="dropdown">
+                    <button class="btn btn-success dropdown-toggle" type="button" id="option3-dropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        ACTIVITY LEVEL
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="option3-dropdown">
+                        <a class="dropdown-item" href="#" data-value="Sedentary">Sedentary</a>
+                        <a class="dropdown-item" href="#" data-value="Lightly Active">Lightly Active</a>
+                        <a class="dropdown-item" href="#" data-value="Moderately Active">Moderately Active</a>
+                        <a class="dropdown-item" href="#" data-value="Extremely Active">Extremely Active</a>
+                    </div>
+                </div>
+                <input type="hidden" id="option3-dropdown-hidden" name="option3" />
+            </div>
+            <div class="column">
+                <div class="dropdown">
+                    <button class="btn btn-danger dropdown-toggle" type="button" id="option4-dropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        HEALTH GOALS
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="option4-dropdown">
+                        <a class="dropdown-item d" href="#" data-value="Weight Loss">Weight Loss</a>
+                        <a class="dropdown-item d" href="#" data-value="Muscle Gain">Muscle Gain</a>
+                        <a class="dropdown-item d" href="#" data-value="Improved Endurance">Improved Endurance</a>
+                        <a class="dropdown-item d" href="#" data-value="Increased Energy Levels">Increased Energy
+                            Levels</a>
+                        <a class="dropdown-item d" href="#" data-value="Balanced Nutrition">Balanced Nutrition</a>
+                        <a class="dropdown-item d" href="#" data-value="improved Digestion">Improved Digestion</a>
+                        <a class="dropdown-item d" href="#" data-value="Heart Health">Heart Health</a>
+                        <a class="dropdown-item d" href="#" data-value="Blood Sugar Management">Blood Sugar
+                            Management</a>
+                        <a class="dropdown-item d" href="#" data-value="Anti-Inflammatory">Anti-Inflammatory</a>
+                    </div>
+                </div>
+                <input type="hidden" id="option4-dropdown-hidden" name="option4" />
+            </div>
+
+        </div>
+        <!-- Button to submit the selected options -->
+        <button id="submit-btn" type="submit" onclick="$('#cover-spin').show(0)" class="btn">Get Answer</button>
+        <div id="cover-spin"></div>
+
+        </form>
+
+        <!-- Display the answer from ChatGPT -->
+        <div id="answer-display"></div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="js/client.js"></script>
+</body>
+
+</html>
