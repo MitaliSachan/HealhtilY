@@ -367,6 +367,9 @@ hr {
   p {
     font-size: 1.3em;
   }
+  .home .content button {
+    display: none;
+  }
   
 }
 
