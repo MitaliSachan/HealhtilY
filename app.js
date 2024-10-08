@@ -101,6 +101,16 @@ app.post("/submit", async (req, res) => {
           padding: 7px 20px 7px 20px;
           
           }
+          a:hover{
+          border:0.2rem solid rgba(0, 0, 0, 0.1);
+          background: #292d2d;
+          background-image: -webkit-linear-gradient(top, #304d4f, #314048);
+          background-image: -moz-linear-gradient(top, #2d4e50, #414b51);
+          background-image: -ms-linear-gradient(top, #4c5454, #515557);
+          background-image: -o-linear-gradient(top, #445051, #384349);
+          background-image: linear-gradient(to bottom, #434f50, #304049);
+          text-decoration: none;
+          }
         </style>
 
       </head>
