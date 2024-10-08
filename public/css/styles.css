@@ -84,10 +84,12 @@ section {
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
   border-radius: 28px;
+  border: 2px solid rgb(205, 186, 147);
   font-family: "Ubuntu";
   color: #ffffff;
   font-size: 18px;
   padding: 7px 20px 7px 20px;
+  margin-top: 5%;
   text-decoration: none;
 }
 .icons .btn:hover {
@@ -113,7 +115,7 @@ section {
   display: none;
   font-size: 24px;
   user-select: none;
-  right: 22%;
+  right: 8%;
   top: 28%;
 }
 .home {
@@ -348,7 +350,7 @@ hr {
     font-size: 2rem;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 520px) {
   html {
     font-size: 50%;
   }
@@ -365,9 +367,7 @@ hr {
   p {
     font-size: 1.3em;
   }
-  .header .nav_links .hamburger {
-    right: 25%;
-  }
+  
 }
 
 @media (max-width: 1174px) {
